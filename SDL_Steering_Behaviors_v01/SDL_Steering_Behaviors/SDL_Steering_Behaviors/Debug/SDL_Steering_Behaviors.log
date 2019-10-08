@@ -1,0 +1,11 @@
+﻿  Arrive.cpp
+  Agent.cpp
+  Flee.cpp
+  SceneArrive.cpp
+  SceneFlee.cpp
+  SceneSeek.cpp
+  SceneSeekFlee.cpp
+  Seek.cpp
+  main.cpp
+  Generando código...
+  SDL_Steering_Behaviors.vcxproj -> C:\Users\itus9\OneDrive\Documentos\ENTI\3r\Tecniques d'IA\SDL_Steering_Behaviors_v01\\bin\SDL_Steering_Behaviors.exe
