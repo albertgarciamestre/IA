@@ -4,7 +4,8 @@
 class Seek :
 	public Agent::SteeringBehavior
 {
-
+private:
+	Vector2D DesiredVelocity;
 public:
 	
 	Seek();

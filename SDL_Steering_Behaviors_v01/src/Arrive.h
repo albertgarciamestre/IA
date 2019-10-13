@@ -7,6 +7,7 @@ class Arrive :
 {
 private :
 	const int SlowingRadius;
+	Vector2D DesiredVelocity;
 public:
 	Arrive();
 	~Arrive();

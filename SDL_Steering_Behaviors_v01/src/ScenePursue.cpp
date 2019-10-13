@@ -1,6 +1,6 @@
 #include "ScenePursue.h"
 #include "Pursue.h"
-#include "Flee.h"
+#include "Evade.h"
 
 using namespace std;
 
@@ -8,13 +8,15 @@ ScenePursue::ScenePursue()
 {
 	Agent *agent = new Agent;
 	agent->setBehavior(new Pursue);
+
 	agent->setTarget(Vector2D(100, 100));
+	agent->setPosition(Vector2D(100, 500));
 	agent->loadSpriteTexture("../res/zombie1.png", 8);
 	agents.push_back(agent);
 	agent = new Agent();
 	agent->setBehavior(new Pursue);
 	agent->setPosition(Vector2D(600, 50));
-	agent->setTarget(Vector2D(900, 650));
+	agent->setTarget(Vector2D(100, 650));
 	agent->loadSpriteTexture("../res/soldier.png", 4);
 	agents.push_back(agent);
 	target = Vector2D(100, 100);

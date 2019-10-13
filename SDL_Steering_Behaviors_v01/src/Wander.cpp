@@ -1,7 +1,13 @@
 #include "Wander.h"
 
 Wander::Wander() :
-	SlowingRadius(5)
+	 WanderMaxAngleChange(3),
+// Distance from Agent to Wander Circle Center
+ WanderOffset(1),
+ WanderRadius(2),
+	 DesiredVelocity(Vector2D(0,0)),
+ WanderAngle(0),
+ TargetAngle(0)
 {
 }
 
@@ -20,7 +26,7 @@ void Wander::applySteeringForce(Agent *agent, float dtime)
 Vector2D Wander::CalculateSteeringForce(Agent * target, Agent *agent)
 {
 
-	Vector2D DesiredVelocity = CalculateSeekVelocity(agent, target);
+	 DesiredVelocity = CalculateSeekVelocity(agent, target);
 	Vector2D VelDelta = (DesiredVelocity - agent->getVelocity());
 	VelDelta /= agent->getArriveSpeed();
 	Vector2D SteeringForce = VelDelta * agent->getMaxForce();
@@ -29,19 +35,39 @@ Vector2D Wander::CalculateSteeringForce(Agent * target, Agent *agent)
 Vector2D Wander::CalculateSeekVelocity(Agent * target, Agent *agent)
 {
 	wander(target);
-	Vector2D DesiredVelocity = agent->getTarget() - agent->getPosition();
+	//upadte wander angle
+	
+	 WanderAngle += RandomBinomial() * WanderMaxAngleChange;
+	TargetAngle = /*Agent.orientation*/WanderAngle;
+	 DesiredVelocity = agent->getTarget() - agent->getPosition();
 	DesiredVelocity.Normalize();
 	DesiredVelocity *= agent->getArriveSpeed();
 	return DesiredVelocity;
 }
 void Wander::wander(Agent * agent) {
-	Vector2D DistanceToTarget;
-	float Distance = DistanceToTarget.Distance(agent->getPosition(), agent->getTarget());
-	agent->setArriveSpeed(agent->getMaxVelocity());
-	float SpeedFactor = 1.0f;
-	if (Distance < SlowingRadius)
-		SpeedFactor = (Distance / SlowingRadius);
-	agent->setArriveSpeed(agent->getArriveSpeed()*SpeedFactor);
+	Vector2D CircleCenter = agent->getPosition() + DesiredVelocity.Normalize() * WanderOffset;
+	Vector2D TargetPosition;
+	TargetPosition.x = CircleCenter.x +
+		WanderRadius * cos(TargetAngle);
+	TargetPosition.y = CircleCenter.y +
+		WanderRadius * sin(TargetAngle);
+}
+// Returns a random number between -1 and 1 inclusive
+float Wander::RandomBinomial() {
+	return (rand() / (RAND_MAX)) - (rand() / (RAND_MAX));
+}
+float lerp(float a, float b, float f)
+{
+	return a + f * (b - a);
+}
+float Wander::Orientacio(Agent *agent) {
+	float angleToUpdate = atan2f(agent->getVelocity().x, agent->getVelocity().y);
+	float angleDelta = angleToUpdate - WanderAngle;
+	if (angleDelta > 180.0f)
+		WanderAngle += 360.0f;
+	else if (angleDelta < -180.0f)
+		WanderAngle -= 360.0f;
+	WanderAngle = lerp(WanderAngle, angleToUpdate, 0.1f);
 }
 /*Vector2D DistanceToTarget;
 	float Distance=DistanceToTarget.Dot(agent->getPosition(),agent->getTarget());

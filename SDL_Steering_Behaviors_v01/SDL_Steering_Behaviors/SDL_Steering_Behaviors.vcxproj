@@ -88,7 +88,7 @@
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\SDL2_ttf\lib\x86;$(SolutionDir)lib\SDL2_image\lib\x86;$(SolutionDir)lib\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib</AdditionalDependencies>
     </Link>
@@ -130,11 +130,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Tecniques d%27IA\SDL_Steering_Behaviors_v01\src\Evade.cpp" />
-    <ClCompile Include="..\..\..\Tecniques d%27IA\SDL_Steering_Behaviors_v01\src\Pursue.cpp" />
-    <ClCompile Include="..\..\..\Tecniques d%27IA\SDL_Steering_Behaviors_v01\src\ScenePursue.cpp" />
+    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Evade.cpp" />
+    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Flocking.cpp" />
+    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Pursue.cpp" />
+    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\SceneFlocking.cpp" />
+    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\ScenePursue.cpp" />
+    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Wander.cpp" />
     <ClCompile Include="..\src\SceneWander.cpp" />
-    <ClCompile Include="..\..\..\Tecniques d%27IA\SDL_Steering_Behaviors_v01\src\Wander.cpp" />
     <ClCompile Include="..\src\Agent.cpp" />
     <ClCompile Include="..\src\Arrive.cpp" />
     <ClCompile Include="..\src\Flee.cpp" />
@@ -148,11 +150,13 @@
     <ClCompile Include="..\src\utils .cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Tecniques d%27IA\SDL_Steering_Behaviors_v01\src\Evade.h" />
-    <ClInclude Include="..\..\..\Tecniques d%27IA\SDL_Steering_Behaviors_v01\src\Pursue.h" />
-    <ClInclude Include="..\..\..\Tecniques d%27IA\SDL_Steering_Behaviors_v01\src\ScenePursue.h" />
-    <ClInclude Include="..\..\..\Tecniques d%27IA\SDL_Steering_Behaviors_v01\src\SceneWander.h" />
-    <ClInclude Include="..\..\..\Tecniques d%27IA\SDL_Steering_Behaviors_v01\src\Wander.h" />
+    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Evade.h" />
+    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Flocking.h" />
+    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Pursue.h" />
+    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\SceneFlocking.h" />
+    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\ScenePursue.h" />
+    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\SceneWander.h" />
+    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Wander.h" />
     <ClInclude Include="..\src\Agent.h" />
     <ClInclude Include="..\src\Arrive.h" />
     <ClInclude Include="..\src\Flee.h" />

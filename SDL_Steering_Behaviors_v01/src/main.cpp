@@ -48,13 +48,19 @@ int main(int argc, char ** argv)
 			if (event.key.keysym.scancode == SDL_SCANCODE_3)
 			{
 				delete(curr_scene);
-				curr_scene = new ScenePursue;
+				curr_scene = new SceneArrive;
 				app->setWindowTitle(curr_scene->getTitle());
 			}
 			if (event.key.keysym.scancode == SDL_SCANCODE_4)
 			{
 				delete(curr_scene);
-				curr_scene = new SceneArrive;
+				curr_scene = new ScenePursue;
+				app->setWindowTitle(curr_scene->getTitle());
+			}
+			if (event.key.keysym.scancode == SDL_SCANCODE_5)
+			{
+				delete(curr_scene);
+				curr_scene = new SceneWander;
 				app->setWindowTitle(curr_scene->getTitle());
 			}
 			if ((event.key.keysym.scancode == SDL_SCANCODE_Q) || (event.key.keysym.scancode == SDL_SCANCODE_ESCAPE))

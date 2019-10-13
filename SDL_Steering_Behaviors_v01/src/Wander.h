@@ -6,7 +6,15 @@ class Wander :
 	public Agent::SteeringBehavior
 {
 private:
-	const int SlowingRadius;
+	// Maximum Change of Angle in one frame
+	const float WanderMaxAngleChange;
+	// Distance from Agent to Wander Circle Center
+	const float WanderOffset;
+	// Radius of Wander Circle
+	const float WanderRadius;
+	Vector2D DesiredVelocity;
+	float WanderAngle;
+	float TargetAngle;
 public:
 	Wander();
 	~Wander();
@@ -14,4 +22,6 @@ public:
 	Vector2D CalculateSteeringForce(Agent * target, Agent *agent);
 	Vector2D CalculateSeekVelocity(Agent *target, Agent* agent);
 	void wander(Agent *agent);
+	float RandomBinomial();
+	float Orientacio(Agent *agent);
 };

@@ -6,7 +6,7 @@ Agent::Agent() : sprite_texture(0),
                  position(Vector2D(100, 100)),
 	             target(Vector2D(1000, 100)),
 	             velocity(Vector2D(0,0)),
-				 targetVelocity(Vector2D(0, 0)),
+				 targetVelocity(float( 0)),
 				 acceleration(Vector2D(0, 0)),
 				 ArriveSpeed(float(0)),
 	             mass(0.5),
@@ -47,7 +47,7 @@ Vector2D Agent::getVelocity()
 {
 	return velocity;
 }
-Vector2D Agent::getTargetVelocity()
+float Agent::getTargetVelocity()
 {
 	return targetVelocity;
 }
@@ -91,7 +91,7 @@ void Agent::setVelocity(Vector2D _velocity)
 {
 	velocity = _velocity;
 }
-void Agent::setTargetVelocity(Vector2D _targetVelocity)
+void Agent::setTargetVelocity(float _targetVelocity)
 {
 	targetVelocity = _targetVelocity;
 }
