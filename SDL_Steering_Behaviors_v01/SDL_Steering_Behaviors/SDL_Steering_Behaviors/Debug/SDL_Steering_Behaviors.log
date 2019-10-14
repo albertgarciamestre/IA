@@ -1,2 +1,4 @@
-﻿  Pursue.cpp
-  SDL_Steering_Behaviors.vcxproj -> C:\Users\albert.garcia.2\Documents\GitHub\IA\SDL_Steering_Behaviors_v01\\bin\SDL_Steering_Behaviors.exe
+﻿  SceneFlocking.cpp
+c:\users\itus9\onedrive\documentos\enti\3r\tecniques d'ia\repository\ia\sdl_steering_behaviors_v01\src\sceneflocking.cpp(15): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\itus9\onedrive\documentos\enti\3r\tecniques d'ia\repository\ia\sdl_steering_behaviors_v01\src\sceneflocking.cpp(16): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+  SDL_Steering_Behaviors.vcxproj -> C:\Users\itus9\OneDrive\Documentos\ENTI\3r\Tecniques d'IA\Repository\IA\SDL_Steering_Behaviors_v01\\bin\SDL_Steering_Behaviors.exe
