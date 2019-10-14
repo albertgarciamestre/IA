@@ -1,7 +1,7 @@
 #include "Arrive.h"
 
 Arrive::Arrive() : 
-	SlowingRadius(10)
+	SlowingRadius(500)
 {
 }
 
@@ -14,7 +14,7 @@ void Arrive::applySteeringForce(Agent *agent, float dtime)
 	agent->setSteeringForce(CalculateSteeringForce(agent, agent));
 	agent->setAcceleration(agent->getSteeringForce() / agent->getMass());
 	agent->setVelocity(agent->getVelocity() + agent->getAcceleration() * dtime);
-	agent->setVelocity(agent->getVelocity().Truncate(agent->getArriveSpeed()));
+	agent->setVelocity(agent->getVelocity().Truncate(agent->getMaxVelocity()));
 	agent->setPosition(agent->getPosition() + agent->getVelocity() * dtime);
 }
 Vector2D Arrive::CalculateSteeringForce(Agent * target, Agent *agent)
@@ -38,7 +38,7 @@ void Arrive::arriving(Agent * agent) {
 	Vector2D DistanceToTarget;
 	float Distance = DistanceToTarget.Distance(agent->getPosition(), agent->getTarget());
 	agent->setArriveSpeed (agent->getMaxVelocity());
-	float SpeedFactor = 0.5f;
+	float SpeedFactor = 1.f;
 	if (Distance < SlowingRadius)
 		SpeedFactor = (Distance / SlowingRadius);
 	agent->setArriveSpeed(agent->getArriveSpeed()*SpeedFactor);

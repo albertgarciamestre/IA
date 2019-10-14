@@ -13,6 +13,7 @@ private:
 	// Radius of Wander Circle
 	const float WanderRadius;
 	Vector2D DesiredVelocity;
+	Vector2D TargetPosition;
 	float WanderAngle;
 	float TargetAngle;
 public:

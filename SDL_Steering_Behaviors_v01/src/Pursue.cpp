@@ -24,14 +24,14 @@ Vector2D Pursue::CalculateSteeringForce(Agent * target, Agent *agent)
 	 DesiredVelocity = CalculateSeekVelocity(agent, target);
 	Vector2D VelDelta = (DesiredVelocity - agent->getVelocity());
 	VelDelta /= agent->getMaxVelocity();
-	Vector2D SteeringForce = VelDelta * agent->getMaxForce();	//std::cout << DesiredVelocity.x << DesiredVelocity.y<< std::endl;
+	Vector2D SteeringForce = VelDelta * agent->getMaxForce();	
 	return SteeringForce;
 }
 Vector2D Pursue::CalculateSeekVelocity(Agent * target, Agent *agent)
 {
 	
 	pursue(agent,target);
-	 DesiredVelocity = PredictedTarget - agent->getPosition();
+	DesiredVelocity = PredictedTarget - agent->getPosition();
 	DesiredVelocity.Normalize();
 	DesiredVelocity *= agent->getMaxVelocity();
 	return DesiredVelocity;
@@ -40,6 +40,7 @@ void Pursue::pursue(Agent * agent, Agent * target) {
 	
 	Vector2D DistanceToTarget;
 	float Distance = DistanceToTarget.Distance(agent->getPosition(), agent->getTarget());
+
 	float T =  Distance/ agent->getMaxVelocity();
 	PredictedTarget = agent->getTarget() + target->getVelocity()*T;
 	

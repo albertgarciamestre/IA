@@ -51,22 +51,22 @@
     <ClCompile Include="..\src\SceneWander.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Evade.cpp">
+    <ClCompile Include="..\src\Evade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Pursue.cpp">
+    <ClCompile Include="..\src\Flocking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\ScenePursue.cpp">
+    <ClCompile Include="..\src\Pursue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Wander.cpp">
+    <ClCompile Include="..\src\SceneFlocking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Flocking.cpp">
+    <ClCompile Include="..\src\ScenePursue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\SceneFlocking.cpp">
+    <ClCompile Include="..\src\Wander.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -107,25 +107,25 @@
     <ClInclude Include="..\src\Arrive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Evade.h">
+    <ClInclude Include="..\src\Evade.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Pursue.h">
+    <ClInclude Include="..\src\Flocking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\ScenePursue.h">
+    <ClInclude Include="..\src\SceneWander.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\SceneWander.h">
+    <ClInclude Include="..\src\Wander.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Wander.h">
+    <ClInclude Include="..\src\Pursue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\Flocking.h">
+    <ClInclude Include="..\src\SceneFlocking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Tecniques d%27IA\Repository\IA\SDL_Steering_Behaviors_v01\src\SceneFlocking.h">
+    <ClInclude Include="..\src\ScenePursue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -9,6 +9,7 @@ SceneArrive::SceneArrive()
 	Agent *agent = new Agent;
 	agent->setBehavior(new Arrive);
 	agent->setPosition(Vector2D(740,560));
+	agent->setMass(0.01);
 	agent->setTarget(Vector2D(640, 360));
 	agent->loadSpriteTexture("../res/soldier.png", 4);
 	agents.push_back(agent);

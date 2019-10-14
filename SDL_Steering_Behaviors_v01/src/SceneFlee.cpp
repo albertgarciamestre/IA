@@ -8,6 +8,7 @@ SceneFlee::SceneFlee()
 	Agent *agent = new Agent;
 	agent->setBehavior(new Flee);
 	agent->setPosition(Vector2D(640,360));
+	agent->setVelocity(Vector2D(40, 40));
 	agent->setTarget(Vector2D(640, 360));
 	agent->loadSpriteTexture("../res/soldier.png", 4);
 	agents.push_back(agent);

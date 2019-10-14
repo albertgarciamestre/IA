@@ -30,7 +30,7 @@ Vector2D Evade::CalculateSteeringForce(Agent * target, Agent *agent)
 Vector2D Evade::CalculateSeekVelocity(Agent * target, Agent *agent)
 {
 	evade(agent,target);
-	DesiredVelocity = PredictedTarget - agent->getPosition();
+	DesiredVelocity = agent->getPosition()-PredictedTarget  ;
 	DesiredVelocity.Normalize();
 	DesiredVelocity *= agent->getMaxVelocity();
 	return DesiredVelocity;
